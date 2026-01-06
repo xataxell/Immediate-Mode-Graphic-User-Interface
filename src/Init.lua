@@ -1424,7 +1424,7 @@ function ReGui:OnElementCreate(Data: OnElementCreateData)
 end
 
 function ReGui:VisualError(Canvas, Parent, Message: string)
-	local Visual = self.Initialised and Canvas.Error
+	--[[local Visual = self.Initialised and Canvas.Error
 
 	--// Print error message
 	if not Visual then
@@ -1436,7 +1436,7 @@ function ReGui:VisualError(Canvas, Parent, Message: string)
 	Canvas:Error({
 		Parent = Parent,
 		Text = Message
-	})
+	})]]--
 end
 
 function ReGui:WrapGeneration(Function, Data: table)
