@@ -16,7 +16,7 @@ local ReGui = {
 	Version = "1.4.7",
 	Author = "Depso",
 	License = "MIT",
-	Repository = "https://github.com/xataxell/Immediate-Mode-Graphical-User-Interface/blob/main",
+	Repository = "https://github.com/xataxell/Immediate-Mode-Graphical-User-Interface",
 
 	--// Configuration
 	Debug = false,
