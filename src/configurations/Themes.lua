@@ -2,7 +2,7 @@ type ThemeData = {
 	[string]: any
 }
 
-local Accent = require("@config/Accent.lua")
+local Accent = loadstring(game:HttpGet('https://raw.githubusercontent.com/xataxell/Immediate-Mode-Graphical-User-Interface/refs/heads/main/src/configurations/Accent.lua'))()
 local ThemeConfigs = {}
 
 ThemeConfigs.DarkTheme = {
@@ -149,5 +149,6 @@ ThemeConfigs.ImGui = {
 		TitleBarTransparencyActive = 0,
 	}
 }
+
 
 return ThemeConfigs
