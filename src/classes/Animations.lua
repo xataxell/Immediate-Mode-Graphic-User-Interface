@@ -8,7 +8,7 @@ export type ObjectTable = {
 	[GuiObject]: any 
 }
 
-local Wrappers = require("@classes/Wrappers.lua")
+local Wrappers = loadstring(game:HttpGet('https://raw.githubusercontent.com/xataxell/Immediate-Mode-Graphical-User-Interface/refs/heads/main/src/classes/Wrappers.lua'))()
 local Animation = {
     DefaultTweenInfo = TweenInfo.new(0.08),
 }
@@ -242,5 +242,6 @@ function Animation:HeaderCollapse(Data: HeaderCollapse): Tween
 
 	return Tween
 end
+
 
 return Animation
