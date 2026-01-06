@@ -1016,11 +1016,11 @@ function ReGui:ApplyStyle(Object: GuiObject, StyleName: string)
 	local Style = Styles[StyleName]
 	if not Style then return end
 
-	--// (don't) Apply style properties
-	--[[self:ApplyFlags({
+	--// Apply style properties
+	self:ApplyFlags({
 		Object = Object,
 		Class = Style
-	})]]--
+	})
 end
 
 function ReGui:ClassIgnores(Key: string): boolean
@@ -1485,10 +1485,10 @@ function ReGui:WrapGeneration(Function, Data: table)
 				ErrorCache[Parent] = Class
 			end
 
-			--// (don't) Create visual error message
-			--self:VisualError(Canvas, Parent, Class)
-			--self:Error("Class:", Class)
-			--self:Error(debug.traceback())
+			--// Create visual error message
+			self:VisualError(Canvas, Parent, Class)
+			self:Error("Class:", Class)
+			self:Error(debug.traceback())
 		end
 
 		--// Some elements may return the instance without a class
@@ -6779,3 +6779,5 @@ GenerateCFrameInput("SliderCFrame", "SliderInt3")
 GenerateCFrameInput("DragCFrame", "DragInt3")
 
 return ReGui
+
+getgenv().ReGui = ReGui
