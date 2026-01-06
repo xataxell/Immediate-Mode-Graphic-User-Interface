@@ -1485,10 +1485,10 @@ function ReGui:WrapGeneration(Function, Data: table)
 				ErrorCache[Parent] = Class
 			end
 
-			--// Create visual error message
-			self:VisualError(Canvas, Parent, Class)
-			self:Error("Class:", Class)
-			self:Error(debug.traceback())
+			--// (don't) Create visual error message
+			--self:VisualError(Canvas, Parent, Class)
+			--self:Error("Class:", Class)
+			--self:Error(debug.traceback())
 		end
 
 		--// Some elements may return the instance without a class
