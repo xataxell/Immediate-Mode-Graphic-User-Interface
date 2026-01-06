@@ -11,7 +11,7 @@ type FlagFunc = {
 	Object: GuiObject
 }
 
-local Wrappers = require("@classes/Wrappers.lua")
+local Wrappers = loadstring(game:HttpGet('https://raw.githubusercontent.com/xataxell/Immediate-Mode-Graphical-User-Interface/refs/heads/main/src/classes/Wrappers.lua'))()
 local ReGui = nil
 
 Wrappers:AddOnInit(function(self)
@@ -291,3 +291,4 @@ return {
 		end
 	}
 }
+
